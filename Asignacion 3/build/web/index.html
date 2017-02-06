@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Assigment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href= "/static/bookstore.css/" rel= "stylesheet" />
+    </head>
+    <body>
+        
+        
+        <h1>Agregar un nuevo titulo</h1>
+		<u>Informacion general</u>
+		<br/><br/>
+                <form action="CrearLibro"> 
+                    
+                <p>    
+		<label> Nombre: <input type="text" name="nombre-txt" value=""/></label>
+		<br/><br/>
+		<label> Precio: <input type="text" name="precio-txt" value=""/></label>
+		<br/><br/>
+		<label> ISBN: <input type="text" name="ISBN-txt" value=""/></label>
+		<br/><br/>
+		<label> Fecha de publicacion: <input type="text" name="publicacion-txt" value=""/></label>
+		<br/><br/>
+		<u>Informacion del genero</u>
+		<br/><br/>
+                
+                <select name="genero-txt">
+                    <option value=""></option>
+                    <option value="Lirica">Lirica</option>
+                    <option value="Narrativa">Narrativa</option>
+                    <option value="Drama">Drama</option>
+                </select><br/><br/>
+                <u>Informacion de publicacion</u> <br/><br/>
+                <label> Editorial: <input type="text" name="editorial-txt" value=""/></label>
+                <label> Autor <input type="text" name="autor-txt" value=""/></label>
+                </p>
+                
+                <input type="submit" class="btn" value="Guardar" />
+                </form> 
+    </body>
+</html>

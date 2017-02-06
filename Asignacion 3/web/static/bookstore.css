@@ -1,0 +1,39 @@
+html,  body {
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body{
+    font-size: 14px;
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+article header h1 {
+    font-size: 18px;
+    margin-top: 30px;
+    background-color: #ccc;
+    padding: 5px 0px 5px 5px;
+}
+
+p label {
+    display: inline-block;
+    width: 80px;
+    padding: 0px 30px 0px 0px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+.btn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
