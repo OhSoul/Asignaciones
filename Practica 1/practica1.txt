@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Practica 1</title>
+	</head>
+	<body>
+	
+		<form>
+			<h1>Introduzca sus datos</h1><u>(Todos  los campos en mayuscula)</u><br/><br/>
+			<label>Nombre: <input type="text" id="nombre-txt" value=""/></label>
+			<br/><br/>
+			<label>Apellido Paterno: <input type="text" id="apellidoP-txt" value=""/></label>
+			<br/><br/>
+			<label>Apellido Materno: <input type="text" id="apellidoM-txt" value=""/></label>
+			<br/><br/>
+			<label>Fecha de nacimiento (dia, mes, año): <u>(ejemplo: "010199")</u> <input type="text" id="fechaN-txt" value=""/></label>
+			<br/><br/>
+			<label>Genero: </label>
+			<select id="genero-txt">
+				<option value=""></option>	
+				<option value="MASCULINO">Masculino</option>
+				<option value="FEMENINO">Femenino</option>
+			</select>
+			<br/><br/>
+			<input type="button" value="Crear RFC" onclick="rfc()"/>
+		
+			<p id ="rfc-txt" value="RFC: "></p>
+		</form>
+	
+		
+		
+		<script>
+			function rfc(){
+				var nombre = document.getElementById("nombre-txt").value;
+				var apellidoP = document.getElementById("apellidoP-txt").value;
+				var apellidoM = document.getElementById("apellidoM-txt").value;
+				var fechaN = document.getElementById("fechaN-txt").value;
+				var genero = document.getElementById("genero-txt").value;
+			
+				var no = nombre.substring(0, 2 );
+				var aP = apellidoP.substring(0, 2);
+				var aM = apellidoM.substring(0,2);
+				var fe = fechaN.substring(0,7);
+				var ge = genero.substring(0,1);
+				
+				document.getElementById("rfc-txt").innerHTML = "RFC: " + aP + aM + no + fe + ge;
+			}	
+		</script>
+	</body>
+
+</html> 
