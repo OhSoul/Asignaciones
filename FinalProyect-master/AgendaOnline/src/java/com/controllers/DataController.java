@@ -32,7 +32,7 @@ public class DataController extends HttpServlet {
             
             if(action.equals("insert")){
                 dao.insertar(dto);
-                response.sendRedirect("Profile.jsp"); 
+                response.sendRedirect("ProfileMaestro.jsp"); 
             }else{
                 
             }
@@ -43,7 +43,7 @@ public class DataController extends HttpServlet {
                 dto.setFecha(fechatxt);
                 ArrayList<DataPOJO> deberes = dao.buscar(dto);
                 session.setAttribute("Deberes", deberes);
-                response.sendRedirect("Profile.jsp");
+                response.sendRedirect("ProfileMaestro.jsp");
             }else{
              
             }

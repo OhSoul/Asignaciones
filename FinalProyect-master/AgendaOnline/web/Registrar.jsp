@@ -9,19 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>AgendaOnline</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Registrar</h1>
         <form action="RegisterController" method="POST">
             <div>    
-                <label>Nombre: <input type="text" name="nombre" value=""></label>
-                <br></br>
-                <label>Apellidos: <input type="text" value="" name="apellidos"></label>
+                <label>Nombre Completo: <input type="text" name="nombre" value=""></label>
                 <br></br>
                 <label>Usuario: <input name="user" type="text" value=""></label>
                 <br></br>
-                <label>Password: <input name="password" type="password"value=""></label>
+                <label>Password: <input name="password" type="password" value=""></label>
                 <br></br>
                 <input type="submit" value="Registrar" name="Registrar">
             </div>

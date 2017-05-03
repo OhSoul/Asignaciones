@@ -11,7 +11,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-
+/**
+ *
+ * @author moust
+ */
 public class Log {
     private final String fileName;
     private static Log instance;
@@ -36,5 +39,6 @@ public class Log {
                 br.write(data);
             }
         }catch(Exception e){ }
-     }
+                   
+    }
 }

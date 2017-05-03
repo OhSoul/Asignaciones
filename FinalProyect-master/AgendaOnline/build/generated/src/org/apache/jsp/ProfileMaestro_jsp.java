@@ -6,7 +6,7 @@ import javax.servlet.jsp.*;
 import com.models.DataPOJO;
 import java.util.List;
 
-public final class Profile_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class ProfileMaestro_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -51,22 +51,11 @@ public final class Profile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>AgendaOnline</title>\n");
+      out.write("        <title>Maestro</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <form action=\"ProfileController\">\n");
-      out.write("            <h1>Profile</h1>\n");
-      out.write("            <h2>Hola, Julio</h2>\n");
-      out.write("\n");
-      out.write("            <h3>Username: ");
-      out.print( session.getAttribute("username"));
-      out.write("</h3> \n");
-      out.write("\n");
-      out.write("            <h3>Semestre: 2 </h3>\n");
-      out.write("\n");
-      out.write("            <h3>Contraseña: Licenciado en Seguridad en Tecnologia de Informacion</h3>\n");
-      out.write("            <a href=\"LogoutController\" value=\"Regresar\" >Cerrar Sesion</a>\n");
-      out.write("            <input type=\"button\" value=\"Insertar\" onclick=\"mostrarInsertar()\">\n");
+      out.write("        <h3></h3>\n");
+      out.write("        <input type=\"button\" value=\"Insertar\" onclick=\"mostrarInsertar()\">\n");
       out.write("        <input type=\"button\" value=\"Buscar\" onclick=\"mostrarBuscar()\">\n");
       out.write("        <div id=\"buscarDeber\" style='display:none;'>\n");
       out.write("            <form action=\"DataController\" method=\"POST\">\n");
@@ -94,8 +83,9 @@ public final class Profile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("           function mostrarInsertar(){\n");
       out.write("              document.getElementById('insertarDeber').style.display = 'block';\n");
       out.write("           }\n");
-      out.write("            \n");
       out.write("        </script>\n");
+      out.write("        \n");
+      out.write("        \n");
       out.write("        ");
  if (session != null){
            List deberes = (List) session.getAttribute("Deberes");
@@ -137,7 +127,6 @@ public final class Profile_jsp extends org.apache.jasper.runtime.HttpJspBase
         }
         
       out.write("\n");
-      out.write("        \n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

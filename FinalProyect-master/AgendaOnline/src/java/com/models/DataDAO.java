@@ -14,8 +14,8 @@ public class DataDAO {
     //Metodo para abrir conexion con la base de datos.
      private void abrirConexion() throws SQLException {
         String dbURI = "jdbc:derby://localhost:1527/Deberes";
-        String username = "FCFM";
-        String password ="contra";
+        String username = "FrijolesCharros";
+        String password ="cisco";
         conexion = DriverManager.getConnection(dbURI, username, password);
         }
     
@@ -30,7 +30,7 @@ public class DataDAO {
         try{
            abrirConexion();
            log1.write("Se abrio conexion par buscar");
-           String insert = "insert into DEBERES (MATERIA, DEBER) values  ('"+bean.getMateria() + "', '" + bean.getDeber() +"')";        
+           String insert = "insert into DEBERES (MATERIA, DEBER, FECHA) values  ('"+bean.getMateria() + "', '" + bean.getDeber() +"', '" + bean.getFecha() +"')";        
            Statement stmt = conexion.createStatement();
            stmt.executeUpdate(insert);
            cerrarConexion();
@@ -52,9 +52,9 @@ public class DataDAO {
             while (result .next()){
                DataPOJO comentario = new DataPOJO();
                comentario.setMateria(result.getString("MATERIA"));
+               comentario.setDeber(result.getString("DEBER"));
                comentario.setFecha(result.getString("FECHA"));
                comentariosList.add(comentario);
-               
             } 
            cerrarConexion();
            log1.write("Se cerro conexion par buscar");

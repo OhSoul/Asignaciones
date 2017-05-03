@@ -7,10 +7,15 @@ package com.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import com.models.*;
+
+//import com.models.Authenticate;
 
 /**
  *
@@ -30,8 +35,27 @@ public class LoginController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
+        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+        String txtUsername = request.getParameter("username");
+        String txtPassword = request.getParameter("password");
+       
+        
+        
+        boolean isValid = Authenticate.isValid(txtUsername, txtPassword);
+        if (isValid == true){
+            session.setAttribute("username", txtUsername);
+            response.sendRedirect("Profile.jsp");
+            
+        }else{           
+             RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+             rd.include(request, response);
+             out.print("<font color='red'><b>La usuario o password introducido es erroneo. Porfavor intente de nuevo</b></font>");
+            
+        }
+        
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

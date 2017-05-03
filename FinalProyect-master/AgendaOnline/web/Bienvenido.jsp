@@ -9,15 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>AgendaOnline</title>
     </head>
     <body>
         <h1>Bienvenido</h1>
         <h2>La siguiente pagina web sera una agenda para estudiantes especificamente, esta se encargara de agrupar 
         dichas notas, pendientes o tareas, y mostrar para cuando sera cada una de estas.</h2>
-        <a href="Login.jsp" value="login">Iniciar Session</a>
-        <br></br>
-        <a href="Registrar.jsp" value="registrar">Registrar</a>
+        <a href="Login.jsp" >Iniciar Session</a>
+        <br/>
+        <a href="Registrar.jsp" >Registrar</a>
 
     </body>
 </html>
